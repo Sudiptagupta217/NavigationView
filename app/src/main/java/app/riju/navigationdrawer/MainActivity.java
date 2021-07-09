@@ -14,6 +14,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -26,11 +27,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        drawer =  findViewById(R.id.drawer_layout);
-        navigationView =  findViewById(R.id.nav_view);
+        drawer = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(MainActivity.this);
 
-        Toolbar toolbar =  findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setIcon(R.drawable.ic_baseline_menu_24);
 
@@ -38,11 +39,45 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.getMenu().getItem(1).setActionView(R.layout.menu_image);
         navigationView.getMenu().getItem(2).setActionView(R.layout.menu_image);
 
+
+        ///buttom navigation
+        //initialize and assign Variable
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        //set Home Selected
+        bottomNavigationView.setSelectedItemId(R.id.home);
+
+        //perform ItemSelectesListener
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @SuppressLint("NonConstantResourceId")
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()) {
+                    case R.id.dashboard:
+                        startActivity(new Intent(getApplicationContext(), Dashboard.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.home:
+                        return true;
+                    case R.id.about:
+                        startActivity(new Intent(getApplicationContext(), About.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.profile:
+                        startActivity(new Intent(getApplicationContext(), Account.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                }
+                return true;
+            }
+        });
+
     }
 
 
     @SuppressLint("WrongConstant")
-   // @SuppressLint("NonConstantResourceId")
+    // @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
@@ -141,8 +176,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 //        drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
 //        if (!drawer.isDrawerOpen(GravityCompat.START))
-            drawer.openDrawer(GravityCompat.START);
-      //  else drawer.closeDrawer(GravityCompat.END);
+        drawer.openDrawer(GravityCompat.START);
+        //  else drawer.closeDrawer(GravityCompat.END);
         return true;
     }
 
@@ -153,12 +188,5 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else {
             super.onBackPressed();
         }
-//        Intent i= new Intent(MainActivity.this,MainActivity.class);
-//        startActivity(i);
-//        finish();
-//        Intent intent = new Intent(this, MainActivity.class);
-//        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//        startActivity(intent);
-
     }
 }
