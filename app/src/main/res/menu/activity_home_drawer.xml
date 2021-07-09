@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_Profile"
+            android:icon="@drawable/ic_dot"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_Product"
+            android:icon="@drawable/ic_dot"
+            android:title="Product Services " />
+
+
+        <item
+            android:id="@+id/nav_Resources"
+            android:icon="@drawable/ic_dot"
+            android:title="Resources" />
+        <item
+            android:id="@+id/nav_Events"
+            android:icon="@drawable/ic_dot"
+            android:title="Events" />
+        <item
+            android:id="@+id/nav_Blogs"
+            android:icon="@drawable/ic_dot"
+            android:title="Blogs" />
+        <item
+            android:id="@+id/nav_Case_Studies"
+            android:icon="@drawable/ic_dot"
+            android:title="Case Studies" />
+        <item
+            android:id="@+id/nav_Privacy"
+            android:icon="@drawable/ic_dot"
+            android:title="Privacy Policy" />
+
+        <item
+            android:id="@+id/nav_QRCode"
+            android:icon="@drawable/ic_dot"
+            android:title="QR Code" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_ContactUs"
+                android:icon="@drawable/ic_dot"
+                android:title="Contact Us" />
+            <item
+                android:id="@+id/nav_Logout"
+                android:icon="@drawable/ic_dot"
+                android:iconTint="@android:color/holo_blue_bright"
+                android:title="Log out" />
+        </menu>
+    </item>
+
+</menu>

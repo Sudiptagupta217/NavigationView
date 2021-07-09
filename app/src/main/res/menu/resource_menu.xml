@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/nav_BackPress1"
+        android:title="Back"
+        android:icon="@drawable/back"/>
+
+    <!--    <item-->
+    <!--        android:title="" />-->
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_ARTICLE"
+            android:icon="@drawable/ic_dot"
+            android:title="ARTICLE" />
+        <item
+            android:id="@+id/nav_BLOGS"
+            android:icon="@drawable/ic_dot"
+            android:title="BLOGS " />
+        <item
+            android:id="@+id/nav_WEBINER_SESSIONS"
+            android:icon="@drawable/ic_dot"
+            android:title="WEBINER SESSIONS" />
+        <item
+            android:id="@+id/nav_Multi_CASE_STUDIES"
+            android:icon="@drawable/ic_dot"
+            android:title="CASE STUDIES" />
+        <item
+            android:id="@+id/nav_VIDEO"
+            android:icon="@drawable/ic_dot"
+            android:title="VIDEO" />
+    </group>
+</menu>

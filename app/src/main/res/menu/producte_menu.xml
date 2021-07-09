@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_BackPress"
+        android:icon="@drawable/back"
+        android:title="Back" />
+    <!--    <item-->
+    <!--        android:title="" />-->
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_Cloud_service"
+            android:icon="@drawable/ic_dot"
+            android:title="Cloud service" />
+        <item
+            android:id="@+id/nav_Public_Cloud"
+            android:icon="@drawable/ic_dot"
+            android:title="Public Cloud " />
+        <item
+            android:id="@+id/nav_Private_Cloud"
+            android:icon="@drawable/ic_dot"
+            android:title="Private Cloud" />
+        <item
+            android:id="@+id/nav_Multi_Cloud"
+            android:icon="@drawable/ic_dot"
+            android:title="Multi Cloud" />
+        <item
+            android:id="@+id/nav_Migration"
+            android:icon="@drawable/ic_dot"
+            android:title="Migration As a Service" />
+
+    </group>
+
+</menu>
