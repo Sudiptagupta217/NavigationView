@@ -73,9 +73,6 @@ public class CustomBottomNavigation extends AppCompatActivity {
 
     private void loadFragment(Fragment fragment) {
         // Replace fragment
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.frame_layout, fragment)
-                .commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, fragment).commit();
     }
 }
