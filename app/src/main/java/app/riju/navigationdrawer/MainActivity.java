@@ -179,6 +179,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         } else if (id == R.id.nav_VIDEO) {
 
+        }else if (id == R.id.nav_customMenu) {
+            Intent intent = new Intent(getApplicationContext(),CustomBottomNavigation.class);
+            startActivity(intent);
+            overridePendingTransition(0,0);
         }
 
         //drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);

@@ -52,4 +52,13 @@
         </menu>
     </item>
 
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_customMenu"
+                android:icon="@drawable/ic_dot"
+                android:title="Custom Buttom navigation" />
+        </menu>
+    </item>
+
 </menu>

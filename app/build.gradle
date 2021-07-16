@@ -47,4 +47,8 @@ dependencies {
     implementation "androidx.drawerlayout:drawerlayout:1.1.1"
     implementation "androidx.coordinatorlayout:coordinatorlayout:1.1.0"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    // custombottom navigation
+    implementation 'com.etebarian:meow-bottom-navigation-java:1.2.0'
+
 }
