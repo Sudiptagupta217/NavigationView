@@ -72,7 +72,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return true;
             }
         });
-
     }
 
 
@@ -85,6 +84,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (id == R.id.nav_Profile) {
             Intent intent = new Intent(MainActivity.this, MainActivity.class);
             startActivity(intent);
+            overridePendingTransition(0,0);
             finish();
 
 
@@ -104,20 +104,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_Blogs) {
             Intent intent = new Intent(MainActivity.this, MainActivity.class);
             startActivity(intent);
+            overridePendingTransition(0,0);
             finish();
 
         } else if (id == R.id.nav_Case_Studies) {
             Intent intent = new Intent(MainActivity.this, MainActivity.class);
             startActivity(intent);
+            overridePendingTransition(0,0);
             finish();
         } else if (id == R.id.nav_Privacy) {
             Intent intent = new Intent(MainActivity.this, MainActivity.class);
             startActivity(intent);
+            overridePendingTransition(0,0);
             finish();
 
         } else if (id == R.id.nav_ContactUs) {
             Intent intent = new Intent(MainActivity.this, MainActivity.class);
             startActivity(intent);
+            overridePendingTransition(0,0);
             finish();
 
         } else if (id == R.id.nav_Logout) {
@@ -154,12 +158,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_ARTICLE) {
             Intent intent = new Intent(MainActivity.this, MainActivity.class);
             startActivity(intent);
+            overridePendingTransition(0,0);
             finish();
 
 
         } else if (id == R.id.nav_BLOGS) {
             Intent intent = new Intent(MainActivity.this, MainActivity.class);
             startActivity(intent);
+            overridePendingTransition(0,0);
             finish();
 
         } else if (id == R.id.nav_WEBINER_SESSIONS) {
@@ -168,14 +174,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_Multi_CASE_STUDIES) {
             Intent intent = new Intent(MainActivity.this, MainActivity.class);
             startActivity(intent);
+            overridePendingTransition(0,0);
             finish();
 
         } else if (id == R.id.nav_VIDEO) {
 
         }
 
-//        drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
-//        if (!drawer.isDrawerOpen(GravityCompat.START))
+        //drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
+        //if (!drawer.isDrawerOpen(GravityCompat.START))
         drawer.openDrawer(GravityCompat.START);
         //  else drawer.closeDrawer(GravityCompat.END);
         return true;
@@ -190,3 +197,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 }
+
+
+//CoordinatorLayout

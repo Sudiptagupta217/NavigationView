@@ -24,6 +24,4 @@
         app:itemIconTint="@drawable/selector"
         app:menu="@menu/btm_nav_menu"
         android:layout_alignParentBottom="true"/>
-
-
 </RelativeLayout>
